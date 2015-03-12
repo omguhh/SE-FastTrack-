@@ -13,6 +13,8 @@ class HomeController extends Controller {
 	|
 	*/
 
+
+
 	/**
 	 * Create a new controller instance.
 	 *
@@ -28,9 +30,14 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function contact()
 	{
-		return view('home');
+		//return view('home');
+			return ('login.php');
 	}
+
+
+
+
 
 }
