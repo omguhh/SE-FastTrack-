@@ -6,6 +6,9 @@ C:\xampp\htdocs\SE-FastTrack-
 To view it on your browser type in http://localhost/SE-FastTrack-/public/
 
 ##YOU NEED TO TYPE THESE COMMANDS IN THE PHP TERMINAL IN ORDER TO GET IT RUNNING
+
+(PS: You need to set up a database called fttest on phpmyadmin too)
+
 php artisan migrate
 
 and then..
