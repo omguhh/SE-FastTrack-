@@ -1,3 +1,17 @@
+## Setup
+
+Install this in your htdocs folder in xampp,with the folder being called SE_Repo. So your path should be something like
+C:\xampp\htdocs\SE-FastTrack-
+
+To view it on your browser type in http://localhost/SE-FastTrack-/public/
+
+##YOU NEED TO TYPE THESE COMMANDS IN THE PHP TERMINAL IN ORDER TO GET IT RUNNING
+php artisan migrate
+
+and then..
+php artisan migrate:refresh --seed
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
