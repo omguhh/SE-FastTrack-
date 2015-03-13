@@ -17,7 +17,7 @@ class Clients extends Migration {
 			$table->engine = 'InnoDB';
 
 			$table->increments('cid');
-			$table->date('doa');
+			$table->timestamp('doa');
 			$table->enum('status', ['open','closed']);
 			$table->string('address');
 			$table->integer('mob2');

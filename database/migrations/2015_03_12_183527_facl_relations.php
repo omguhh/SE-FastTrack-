@@ -43,7 +43,7 @@ class FaclRelations extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('facl_ relations');
+		Schema::drop('facl_relations');
 	}
 
 

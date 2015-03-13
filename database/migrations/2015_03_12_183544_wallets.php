@@ -16,7 +16,7 @@ class Wallets extends Migration {
 		{
 			$table->engine = 'InnoDB';
 
-			$table->integer('cid')->unsigned();
+			$table->increments('cid');
 			$table->decimal('balance', 12,2);
 			$table->decimal('equity',12,2);
 
