@@ -20,9 +20,23 @@ class UserController extends Controller {
 	public function index()
 	{
 		$users = User::all();
-		return View::make('index')->with('users',$users);
+
+		$users1 = User::find(5);
+		$users1->delete();
+//		return \View::make('index')->with('users',$users);
+		$users1->save();
+
+
+		/*$user2 = User::findOrfail(8);
+		$user2->name = 'abc';
+		$user2->save();
+*/
+		return \View::make('index')->with('users',$users);
+
 
 	}
+
+
 
 	/**
 	 * Show the form for creating a new resource.
@@ -32,6 +46,8 @@ class UserController extends Controller {
 	public function create()
 	{
 		//
+
+
 	}
 
 	/**
