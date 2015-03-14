@@ -10,21 +10,16 @@ class Client extends Model {
      * @var string
      */
     protected $table = 'clients';
+
+    protected $primaryKey= 'cid';
+
+    public $timestamps = false;
     /**
      * Whitelisted model properties for mass assignment.
      *
      * @var array
      */
     protected $fillable = array('address','mob2');
-
-
-
-
-
-
-
-
-
 
 
 
@@ -56,7 +51,7 @@ class Client extends Model {
 
     public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User','id');
     }
 
     /** RELATIONS - I AM THE FLIP-SIDE(REVERSE) ENDS **/

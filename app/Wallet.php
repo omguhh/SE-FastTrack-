@@ -10,6 +10,9 @@ class Wallet extends Model {
      * @var string
      */
     protected $table = 'wallets';
+
+    protected $primaryKey= 'cid';
+    public $timestamps = false;
     /**
      * Whitelisted model properties for mass assignment.
      *
@@ -20,19 +23,11 @@ class Wallet extends Model {
 
 
 
-
-
-
-
-
-
-
-
     /** RELATIONS AHEAD **/
 
     public function clients()
     {
-        return $this->belongsTo('App\Client');
+        return $this->belongsTo('App\Client','cid');
     }
 
 }

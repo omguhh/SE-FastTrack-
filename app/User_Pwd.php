@@ -10,6 +10,11 @@ class User_Pwd extends Model {
      * @var string
      */
     protected $table = 'user_pwd';
+
+    protected $primaryKey= 'uid';
+    public $timestamps = false;
+
+    protected $hidden = [ 'password', 'remember_token' ];
     /**
      * Whitelisted model properties for mass assignment.
      *
@@ -18,12 +23,9 @@ class User_Pwd extends Model {
     protected $fillable = array('usrn','pwd');
 
 
-
-
-
-
-
-
+    private $rules = array(	'name' => 'required',
+        'usrn' => 'required',
+        'pwd' => 'required');
 
 
 
@@ -31,7 +33,7 @@ class User_Pwd extends Model {
 
     public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User','id');
     }
 
 

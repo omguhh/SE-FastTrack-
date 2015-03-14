@@ -22,10 +22,9 @@ class User extends Model {
 
 
 
-
-
-
-
+    private $rules = array(	'name' => 'required',
+        'email' => 'required|email',
+    'mobile' => 'required');
 
 
 

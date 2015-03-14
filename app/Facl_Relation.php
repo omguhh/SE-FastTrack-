@@ -10,6 +10,9 @@ class Facl_Relation extends Model {
      * @var string
      */
     protected $table = 'facl_relations';
+    protected $primaryKey= 'fid';
+    public $timestamps = false;
+
     /**
      * Whitelisted model properties for mass assignment.
      *
@@ -19,21 +22,15 @@ class Facl_Relation extends Model {
 
 
 
-
-
-
-
-
-
     /** RELATIONS - I AM THE FLIP-SIDE(REVERSE) **/
 
     public function clients()
     {
-        return $this->belongsTo('App\Client');
+        return $this->belongsTo('App\Client','cid');
     }
     public function fa()
     {
-        return $this->belongsTo('App\Fa');
+        return $this->belongsTo('App\Fa','uid');
     }
 
     /** RELATIONS - I AM THE FLIP-SIDE(REVERSE) ENDS **/

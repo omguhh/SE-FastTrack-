@@ -10,6 +10,8 @@ class Fa extends Model {
      * @var string
      */
     protected $table = 'fa';
+    protected $primaryKey= 'uid';
+    public $timestamps = false;
     /**
      * Whitelisted model properties for mass assignment.
      *
@@ -19,19 +21,11 @@ class Fa extends Model {
 
 
 
-
-
-
-
-
-
-
-
     /** RELATIONS - I AM THE FLIP-SIDE(REVERSE) **/
 
     public function users()
     {
-        return $this->belongsTo('User');
+        return $this->belongsTo('User','id');
     }
 
 
