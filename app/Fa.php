@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fa extends Model {
+class Fa extends \Eloquent {
 
     /**
      * The database table used by the model.

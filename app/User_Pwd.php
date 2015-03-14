@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User_Pwd extends Model {
+class User_Pwd extends \Eloquent {
 
     /**
      * The database table used by the model.

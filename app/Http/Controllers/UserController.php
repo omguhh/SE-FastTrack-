@@ -19,12 +19,20 @@ class UserController extends Controller {
 
 	public function index()
 	{
-		$users = User::all();
+		//$users = User::all();
+        $users= User::all();
 
-		$users1 = User::find(5);
-		$users1->delete();
-//		return \View::make('index')->with('users',$users);
-		$users1->save();
+        $user=User::findOrFail(1);
+        $user->name='abc';
+        $user->save();
+
+        //$user->delete();
+
+		//$users1 = User::find(5);
+		//$users1->delete();
+
+        //		return \View::make('index')->with('users',$users);
+		//$users1->save();
 
 
 		/*$user2 = User::findOrfail(8);

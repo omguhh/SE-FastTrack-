@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Wallet extends Model {
+class Wallet extends \Eloquent {
 
     /**
      * The database table used by the model.

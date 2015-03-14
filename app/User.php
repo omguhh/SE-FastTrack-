@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
+class User extends \Eloquent {
     /**
      * The database table used by the model.
      *
@@ -18,8 +18,6 @@ class User extends Model {
      * @var array
      */
     protected $fillable = array('name','email','mobile');
-
-
 
 
     private $rules = array(	'name' => 'required',
@@ -45,3 +43,4 @@ class User extends Model {
     }
     /** RELATIONS AHEAD ENDS **/
 }
+?>

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Facl_Relation extends Model {
+class Facl_Relation extends \Eloquent {
 
     /**
      * The database table used by the model.
